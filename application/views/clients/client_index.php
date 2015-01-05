@@ -3,20 +3,28 @@
 <head>
 	<meta charset="utf-8">
 
-	<link rel="stylesheet" href="<?= base_url(); ?>monCSS/mesStyles1.css" >
+	<link rel="stylesheet" href="<?php echo base_url();?>css/bootstrap.min.css" >
 </head>
 <body>
 
 <div id="container">
-    <div>
-
-        <h1>login : <?= $this->session->userdata('mail');?></h1>
-        <h1> Droit :   <?= $this->session->userdata('droit');?></h1>
-        <h1> Nom :    <?= $this->session->userdata('nom');?></h1>
-
-        <p><?= anchor('users_c/deconnexion','se deconnecter')?></p>
-	</div>
-	<p class="footer">DUT info Belfort <strong>{elapsed_time}</strong> seconds</p>
+    <div class="col-lg-8">
+        <h1></h1>
+    </div>
+	<div class="col-md-4">
+                <!-- Blog connexion -->
+                <div class="well">
+                    <div class="center">
+                    	 <label>-- Coordonnées --	</label>
+                         <p><strong>Prénom : </strong><?= $this->session->userdata('prenom');?></p>
+        			     <p><strong>Nom :  </strong><?= $this->session->userdata('nom');?></p>
+        			     <p><strong>Droit : </strong><?= $this->session->userdata('droit');?></p><hr/>
+        			     <a href="">Espace client</a>
+                    </div>
+                    <!-- /.input-group -->
+                </div>
+       
+		</div>
 </div>
 
 </body>
